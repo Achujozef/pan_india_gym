@@ -1,0 +1,33 @@
+from django.contrib import admin
+from gym_app.models import *
+# Register your models here.
+admin.site.register([BussinessOwnerModel,
+                     Enquiry,
+                     Equipements,
+                     Gender,
+                     BloodGroup,
+                     PrefferedTime,
+                     Role,
+                     Status,
+                     ExtendedUserModel,
+                     BA_Status,
+                     MembershipPlan,
+                     AssignTrainer,
+                     Attendances,
+                     Certifications,
+                     Specializations,
+                     TrainerProfile,
+                     ActivityLevel,
+                     Goal,
+                     MemberProfile,
+                     CustomizedPlan,
+                     Schedule,
+                     Week,
+                     CommonDietPlan,
+                     ScheduleStatus,
+                     SlotBooking,
+                     ShiftTiming,
+                     Slot_Count,
+                     ID_Proof,
+                     Salary_management
+                     ])

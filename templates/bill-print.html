@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{user.user.gym_name}} | Bill details</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+</head>
+<body>
+<div class="wrapper">
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          
+
+
+          <!-- Main content -->
+          <div class="invoice p-3 mb-3">
+            <!-- title row -->
+            <div class="row">
+              <div class="col-12">
+                {% if not user.user.logo %}
+                <h4>
+                  <i class="fas fa-globe"></i> {{user.user.gym_name}}
+                  <small class="float-right" id="current_date"></small>
+                </h4>
+                {% else %}
+                <h4>
+                  <img style="width:55px;" src="{{user.user.logo.url}}"> {{user.user.gym_name}}
+                  <small class="float-right" id="current_date"></small>
+                </h4>
+                {% endif %}
+                
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- info row -->
+            <div class="row invoice-info">
+              <div class="col-sm-4 invoice-col">
+                From
+                <address>
+                  <strong>{{user.user.gym_name}}</strong><br>
+                  Place : {{user.user.place}}<br>
+                  Distict : {{user.user.district}}<br>
+                  Phone : {{user.user.phone}}<br>
+                  State : {{user.user.state}}<br>
+                </address>
+              </div>
+              <!-- /.col -->
+              <div class="col-sm-4 invoice-col">
+                To
+                <address>
+                  <strong>{{bill.member.full_name}}</strong><br>
+                  Address : {{bill.member.address}}<br>
+                  Phone : {{bill.member.phone}}<br>
+                  Email : {{bill.member.user.email}}<br>
+                </address>
+              </div>
+              <!-- /.col -->
+              <div class="col-sm-4 invoice-col">
+                <b>Membership plan :</b> {{bill.membership_plan}}<br>
+                <br>
+                
+                Join date: {{bill.join_date}}<br>
+                Expire date: {{bill.exp_date}}
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+            <!-- Table row -->
+            <div class="row">
+              <div class="col-12 table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                  <tr>
+                    <th>Membership plan</th>
+                    <th>Duration</th>
+                    <th>Join date</th>
+                    <th>Expire date</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>{{bill.membership_plan}}</td>
+                    <td>{{bill.membership_plan.duration}} Months</td>
+                    <td>{{bill.join_date}}</td>
+                    <td>{{bill.exp_date}}</td>
+                  </tr>
+                  
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+              <!-- accepted payments column -->
+              <div class="col-6">
+        
+              </div>
+              <!-- /.col -->
+              <div class="col-6">
+                {% comment %} <p class="lead">Amount Due 2/22/2014</p> {% endcomment %}
+        
+                <div class="table-responsive">
+                  <table class="table">
+                    <tr>
+                      <th style="width:50%">Total Amount:</th>
+                      <td>{{bill.membership_plan.price}}</td>
+                    </tr>
+                    <tr>
+                      <th>Total Paid Amount</th>
+                      <td>{{bill.total_paid_amount}}</td>
+                    </tr>
+                    <tr>
+                      <th>Last Paid Amount</th>
+                      <td>{{bill.Iinitaial_amount}}</td>
+                    </tr>
+                    
+                    <tr>
+                      <th>Pending:</th>
+                      <td>{{bill.pending_amount}}</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <!-- /.col -->
+            </div>
+        
+            <!-- /.row -->
+
+            <!-- this row will not appear when printing -->
+            <div class="row no-print">
+              <div class="col-12">
+                {% comment %} <a href="{% url 'gym_app:bill_generation_print' bill.id %}" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a> {% endcomment %}
+                
+                <a href="{% url 'gym_app:bill_generation_print' bill.id %}" type="button" class="btn btn-primary float-right" style="margin-right: 5px;">
+                  <i class="fas fa-download"></i> Generate PDF
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /.invoice -->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- /.content -->
+</div>
+<!-- ./wrapper -->
+<!-- Page specific script -->
+{% comment %} <script>
+  // JavaScript code to display current date in "dd/mm/yy" format
+  var currentDate = new Date();
+
+  var day = String(currentDate.getDate()).padStart(2, '0');
+  var month = String(currentDate.getMonth() + 1).padStart(2, '0');
+  var year = String(currentDate.getFullYear());
+
+  var formattedDate = day + '/' + month + '/' + year;
+
+  document.getElementById("current_date").innerHTML = formattedDate;
+</script> {% endcomment %}
+<script>
+  window.addEventListener("load", window.print());
+</script>
+</body>
+</html>

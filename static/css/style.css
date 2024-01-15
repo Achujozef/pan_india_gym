@@ -1,0 +1,640 @@
+@font-face {
+    font-family:outfit ;
+    src: url('../font/Outfit-Regular.ttf');
+}
+@font-face {
+    font-family:josesans;
+    src: url('../font/Roboto-Regular.ttf');
+}
+/* dashboard */
+.nav-sidebar .nav-link p {
+    
+    font-family:josesans;
+}
+.info-box-text,.info-box-text a, .info-box-number{
+    font-family:josesans;
+     color: #ffffff;
+}
+.breadcrumb-item a
+{
+    font-family:josesans;
+  color: #000 !important;
+}
+.breadcrumb-item
+{
+    font-family:josesans;
+}
+.content-header h1 {
+    font-size: 1.8rem;
+    font-family:josesans;
+}
+.card-title {
+    float: left;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+    font-family:josesans;
+}
+.dark-mode .table thead th {
+    border-bottom-color: #6c757d;
+    font-family:josesans !important;
+    font-weight: 400;
+}
+.main-footer a{
+    font-family:josesans !important;
+    color: #ffffff;
+}
+.info-box .info-box-icon {
+    border-radius: 100rem;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.875rem;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    width: 64px;
+}
+.loginbox
+{
+    background: #f8f9fab3;
+    border-radius: 73px;
+    margin-top: 99px;
+   
+    height: 100%;
+    width: 79%;
+}
+
+.brand-text
+{
+    font-family:josesans !important;
+    color: #ffffff;
+}
+.buttons-html5
+{
+    font-family:josesans !important;
+   
+}
+table.dataTable {
+    clear: both;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+    border-collapse: separate !important;
+    border-spacing: 0;
+    font-family:josesans !important;
+    font-weight: 500 !important;
+}
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    margin: 2px 0;
+    white-space: nowrap;
+    justify-content: flex-end;
+    font-family: josesans;
+}
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: .85em;
+    font-family: josesans;
+}
+label,.content-header
+{
+    font-family: josesans !important;
+}
+
+.btn-primary {
+    font-family: josesans !important;
+    /* border-radius: 20px !important; */
+    box-shadow: 0px 0px 8px #000 !important;
+}
+div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: .5em;
+    display: inline-block;
+    width: auto;
+    border-radius: 45px;
+    font-family: josesans;
+}
+.nav-sidebar p ,.buttons-print , .navbar{
+    font-family: josesans !important;
+}
+
+/* end */
+body
+{
+    
+        background: azure;
+    }
+
+.slide-img
+{
+
+        width: inherit;
+         height:600px ;
+         border-top-left-radius:50px;
+         border-bottom-left-radius: 50px;
+}
+.slide-img1 {
+    width: inherit;
+    height: 1167px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: url('../img/work-out.jpg');
+}
+#body {
+    background-image: url('../img/trainer-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: 105% 100%;
+    /* background-position: 25% 75%; */
+}
+.register-page{
+    background-image: url('../img/trainer-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: 105% 100%;
+    /* background-position: 25% 75%; */
+}
+.registercard label
+{
+    color: #ffffff;
+}
+.registercard
+{
+padding-top:10px;
+padding-bottom:10px;
+padding-left: 40px;
+padding-right: 40px;
+height: fit-content;
+}
+.loginbox {
+    background: #00000080;
+    border-radius: 3%;
+    margin-top: 20%;
+    height: 89%;
+    width: 79%;
+}
+.card_reg
+{
+    background: #00000080;
+    width: 60%;
+    border-radius:3%;
+}
+.btn-dark
+{
+    background-color: #000 !important;
+    border-color: #000 !important;
+}
+.login-card {
+    padding-left: 50;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+.loginlogo a
+{
+    color: #000;
+    font-family: josesans;
+    font-size: 34pt;
+    text-align: center;
+}
+
+.register-logo
+{
+    color: #000;
+    font-family: josesans;
+    font-size: 34pt;
+    text-align: center;
+
+}
+.loginlogo {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 9%;
+    padding-bottom: 9%;
+    text-align: center;
+}
+#btn-signin 
+{
+    font-family: josesans;
+    font-size: 18pt;
+    width:330%;
+    background-color:#000;
+    border-color: #000;
+   
+}
+#btn-register
+{
+    font-family: josesans;
+    font-size: 10pt;
+  
+
+}
+
+
+select {
+    -webkit-appearance: none;
+  }
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    /* -webkit-appearance: none; */
+}
+.toggle-password {
+    float: right;
+    cursor: pointer;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.375rem 1.10rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #4b4848;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin-left: -2%;
+    width: 47px;
+}
+.floatright
+{
+    float:right;
+}
+
+@media only screen 
+and (min-device-width: 210px) 
+and (max-device-width:320px)
+{
+    .loginlogo {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    #body {
+        background-image: url('../img/trainer-banner.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 25% 75%;
+    }
+   
+    .loginbox {
+        background: #00000080;
+        border-radius: 3%;
+        margin-top:45%;
+        height: 84% !important;
+        width: 98% !important;
+    }
+    .slide-img {
+        width: inherit;
+        height: 600px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        display: none !important;
+    }
+    .register-logo, .loginlogo a{
+        color: #000;
+        font-family: josesans;
+        font-size: 13pt !important;
+        text-align: center;
+    }
+    .login-card {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+    .register-page .card{
+        box-shadow: 0 0 1px rgba(0,0,0,.125),0 1px 3px rgba(0,0,0,.2);
+        margin-bottom: 1rem;
+        border-radius: 50px;
+        height: 1167px;
+        margin-top:0px !important;
+        margin-bottom: 0px !important;
+        margin-left: 0px !important;
+        margin-right:0px !important;
+        padding-top: 50px;
+        padding-bottom:50px;
+    }
+    .registercard {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .slide-img1 {
+        width: inherit;
+        height: 1167px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        background: url('../img/work-out.jpg');
+        display: none !important;
+    }
+  
+    #btn-signin 
+{
+   
+    width:330%;
+    background-color:#000;
+    border-color: #000;
+   
+}
+    #body .card {
+        margin-top:50px !important;
+        margin-bottom: 50px !important;
+        height: 429px !important;
+        border-radius: 50px !important;
+        box-shadow: 0 0 14px 3px rgba(0,0,0,.125), 0 1px 3px rgb(0 0 0 / 54%);
+        overflow: hidden !important;
+        overflow: -moz-hidden-unscrollable !important;
+    }
+    body {
+        overflow: hidden !important;
+    }
+}
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+{
+    .loginbox {
+        background: #00000080;
+        border-radius: 3%;
+        margin-top: 20%;
+        height: 89%;
+        width: 99%;
+    }
+    body {
+        overflow: hidden !important;
+    }
+    #body .card {
+        margin-top: 90px !important;
+        margin-bottom: 90px !important;
+        height: 435px !important;
+        border-radius: 50px;
+        box-shadow: 0 0 14px 3px rgba(0,0,0,.125), 0 1px 3px rgb(0 0 0 / 54%);
+        overflow: hidden !important;
+        overflow: -moz-hidden-unscrollable !important;
+    }
+    #body {
+        background-image: url('../img/trainer-banner.jpg');
+        background-repeat: no-repeat;
+        background-size: cover !important;
+        /* background-position: 25% 75%; */
+    }
+    .slide-img {
+        width: inherit;
+        height: 600px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        display: none !important;
+    }
+  
+    #btn-signin 
+    {
+        font-family: josesans;
+        font-size: 8pt !important;
+        width:330%;
+        background-color:#000;
+        border-color: #000;
+       
+    }
+    .register-logo,.loginlogo a {
+        color: #000;
+        font-family: josesans;
+        font-size: 13pt !important;
+        text-align: center;
+    }
+
+    .register-page .card {
+        box-shadow: 0 0 1px rgba(0,0,0,.125),0 1px 3px rgba(0,0,0,.2);
+        margin-bottom: 1rem;
+        border-radius: 50px;
+        height: 1167px;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .registercard {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .slide-img1 {
+        width: inherit;
+        height: 1167px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        background: url('../img/work-out.jpg');
+        display: none !important;
+    }
+}
+@media only screen 
+and (min-device-width:620px) 
+and (max-device-width:720px)
+{
+     #card1
+     {
+        text-align: center !important;
+     }
+    body {
+        overflow: hidden !important;
+    }
+    /* #body .card {
+        margin-top: 90px !important;
+        margin-bottom: 90px !important;
+        height: 435px !important;
+        border-radius: 50px;
+        box-shadow: 0 0 14px 3px rgba(0,0,0,.125), 0 1px 3px rgb(0 0 0 / 54%);
+        overflow: hidden !important;
+        overflow: -moz-hidden-unscrollable !important;
+    } */
+    #body {
+        background-image: url('../img/trainer-banner.jpg');
+        background-repeat: no-repeat;
+        background-size: 105% 83%;
+        /* background-position: 25% 75%; */
+    }
+    .card1
+    {
+        margin-top: 35%;
+    }
+    .loginbox {
+        background: #00000080;
+        border-radius: 3%;
+        margin: auto;
+        height:104%;
+        width: 79%;
+    }
+    .slide-img {
+        width: inherit;
+        height: 600px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        display: none !important;
+    }
+  
+    #btn-signin 
+    {
+        font-family: josesans;
+        font-size: 8pt !important;
+        width:330%;
+        background-color:#000;
+        border-color: #000;
+       
+    }
+    .register-logo,.loginlogo a {
+        color: #000;
+        font-family: josesans;
+        font-size:25pt !important;
+        text-align: center;
+    }
+   
+    .register-page .card {
+        box-shadow: 0 0 1px rgba(0,0,0,.125),0 1px 3px rgba(0,0,0,.2);
+        margin-bottom: 1rem;
+        border-radius: 50px;
+        height: 1167px;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .registercard {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .slide-img1 {
+        width: inherit;
+        height: 1167px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        background: url('../img/work-out.jpg');
+        display: none !important;
+    }
+}
+@media only screen 
+and (min-device-width:720px) 
+and (max-device-width:820px)
+{
+    body {
+        overflow: hidden !important;
+    }
+    #body .card {
+        margin-top: 90px !important;
+        margin-bottom:90px !important;
+        height: 435px !important;
+        border-radius: 50px;
+        box-shadow: 0 0 14px 3px rgba(0,0,0,.125), 0 1px 3px rgb(0 0 0 / 54%);
+        overflow:  hidden !important;
+        overflow: -moz-hidden-unscrollable !important;
+    }
+    #card1
+    {
+       text-align: center !important;
+    }
+   body {
+       overflow: hidden !important;
+   }
+   /* #body .card {
+       margin-top: 90px !important;
+       margin-bottom: 90px !important;
+       height: 435px !important;
+       border-radius: 50px;
+       box-shadow: 0 0 14px 3px rgba(0,0,0,.125), 0 1px 3px rgb(0 0 0 / 54%);
+       overflow: hidden !important;
+       overflow: -moz-hidden-unscrollable !important;
+   } */
+   #body {
+       background-image: url('../img/trainer-banner.jpg');
+       background-repeat: no-repeat;
+       background-size: 105% 83%;
+       /* background-position: 25% 75%; */
+   }
+   .card1
+   {
+       margin-top: 35%;
+   }
+   .loginbox {
+       background: #00000080;
+       border-radius: 3%;
+       margin: auto !important;
+       height:104%;
+       width: 79%;
+   }
+    .slide-img {
+        width: inherit;
+        height: 600px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        display: none !important;
+    }
+  
+    #btn-signin 
+    {
+        font-family: josesans;
+        font-size: 8pt !important;
+        width:330%;
+        background-color:#000;
+        border-color: #000;
+       
+    }
+    .register-logo,.loginlogo a {
+        color: #000;
+        font-family: josesans;
+        font-size: 25pt !important;
+        text-align: center;
+    }
+   
+    .registercard {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media only screen 
+and (min-device-width:820px) 
+and (max-device-width:1200px)
+{
+    .loginbox {
+        background: #00000080;
+        border-radius: 3%;
+        margin-top: 20%;
+        height: 89%;
+        width: 131%;
+    }
+    .card1
+    {
+        margin-top: 14%;
+    }
+    #btn-signin 
+    {
+        font-family: josesans;
+        font-size: 10pt !important;
+        width:330%;
+        background-color:#000;
+        border-color: #000;
+       
+    }
+    .register-logo {
+        color: #000;
+        font-family: josesans;
+        font-size: 25pt;
+        text-align: center;
+    }
+    .registercard {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
