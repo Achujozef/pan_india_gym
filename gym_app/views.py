@@ -160,7 +160,7 @@ def bussiness_admin_register(request):
 
 def logout(request):
     if 'username' in request.session:
-        request.session.flush();
+        request.session.flush()
     return redirect('gym_app:login')
 
 

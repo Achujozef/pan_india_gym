@@ -5,7 +5,7 @@ from django.dispatch import receiver
 import calendar
 from datetime import timedelta
 from datetime import datetime
-
+from django.utils import timezone
 
 class BA_Status(models.Model):
     def __str__(self):
@@ -51,14 +51,14 @@ class PrefferedTime(models.Model):
     def __str__(self):
         return str(self.name)
     
-    name = models.CharField(max_length=10,blank=True,null=True)
+    name = models.CharField(max_length=10, blank=True, null=True)
     count = models.IntegerField(default=0)
-    remaining_count = models.IntegerField(blank=True,null=True)
-    reset_date = models.DateField(default = datetime.today().date())
+    remaining_count = models.IntegerField(blank=True, null=True)
+    reset_date = models.DateField(default=timezone.now)
 
     def reset_count(self, new_count):
         self.remaining_count = new_count
-        self.reset_date = datetime.today().date() 
+        self.reset_date = timezone.now().date()
         self.save()
 
 
