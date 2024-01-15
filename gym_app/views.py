@@ -101,16 +101,18 @@ def login(request):
                                 request.session['username'] = username
                                 return redirect('gym_app:index')
                             else:
+                               
                                 messages.error(request,'Account deactivated by admin')
                                 return redirect('gym_app:login')
                     except:
                         extndedusrmodel = ExtendedUserModel.objects.get(user__username = username)
                         print(extndedusrmodel)
-                        if extndedusrmodel.status.name == 'Active':
+                        if extndedusrmodel.status.name == 'Activate':
                             auth.login(request, user)
                             request.session['username'] = username
                             return redirect('gym_app:index')
                         else:
+                            print("Hello Error Is here")
                             messages.error(request,'Account deactivated by admin')
                             return redirect('gym_app:login')
 
