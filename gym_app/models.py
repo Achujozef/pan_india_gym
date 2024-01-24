@@ -30,7 +30,7 @@ class BussinessOwnerModel(models.Model):
     gender = models.CharField(max_length=10,blank=False,null=False)
     dob = models.DateField(blank=False,null=False)
     is_bussiness_admin = models.BooleanField(default=True)
-    status = models.ForeignKey(BA_Status,on_delete=models.CASCADE,blank=True,null=True,default=1)
+    status = models.ForeignKey(BA_Status,on_delete=models.CASCADE,blank=True,null=True,default="Activate")
 
 
 
