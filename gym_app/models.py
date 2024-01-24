@@ -258,7 +258,7 @@ class Goal(models.Model):
 
 
 class MemberProfile(models.Model):
-    cextended_user = models.ForeignKey(ExtendedUserModel,on_delete=models.CASCADE, blank=True,null=True,related_name='customer')
+    extended_user = models.ForeignKey(ExtendedUserModel,on_delete=models.CASCADE, blank=True,null=True,related_name='customer')
     goal = models.ForeignKey(Goal,on_delete=models.CASCADE, blank=True,null=True)
     activity_level =  models.ForeignKey(ActivityLevel,on_delete=models.CASCADE, blank=True,null=True)
 

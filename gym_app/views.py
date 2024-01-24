@@ -659,7 +659,9 @@ def attendance_trainer(request):
         if request.user.is_superuser:
             attendance = Attendances.objects.filter(member__role__name = 'Trainer',attendance_date =  datetime.today().date())
         elif request.user.user.is_bussiness_admin:
+            print("Abcd efg")
             attendance = Attendances.objects.filter(member__added_by__user__username = request.user.username,member__role__name = 'Trainer',attendance_date =  datetime.today().date())
+            print(attendance)
     except:
         attendance =  Attendances.objects.filter(member__user__username = request.user.username,member__role__name = 'Trainer').order_by('-attendance_date')
     return render(request,'attendance-trainer.html',{'form': form, 'attendance': attendance})
