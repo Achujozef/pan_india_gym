@@ -88,7 +88,6 @@ class ID_Proof(models.Model):
         return self.name
     name = models.CharField(max_length=50,blank=True,null=True)
 
-
 class ExtendedUserModel(models.Model):
     def __str__(self):
         return self.full_name
@@ -283,8 +282,8 @@ class CustomizedPlan(models.Model):
             return str(self.member)
     added_by_admin = models.ForeignKey(BussinessOwnerModel,on_delete=models.CASCADE,blank=True,null=True)
     admin_member =  models.ForeignKey(ExtendedUserModel,on_delete=models.CASCADE,blank=True,null=True)
-    trainer = models.ForeignKey(ExtendedUserModel, on_delete=models.CASCADE,related_name='diettrainer',blank=True,null=True)  # Trainer who created the diet plan
-    member = models.ForeignKey(AssignTrainer,on_delete=models.CASCADE,blank=True,null=True,related_name='dietmember',verbose_name='Trainer Member')  
+    trainer = models.ForeignKey(ExtendedUserModel, on_delete=models.CASCADE,related_name='diettrainer',blank=True,null=True)  
+    member = models.ForeignKey(AssignTrainer,on_delete=models.CASCADE,blank=True,null=True,related_name='dietmember',verbose_name='Trainer Member')
     calorie_intake =  models.FloatField(null=True)    
     goal = models.CharField(max_length=20, blank=True, null=True)
     # days = models.CharField(max_length=20, blank=True, null=True)
@@ -296,7 +295,7 @@ class CustomizedPlan(models.Model):
 
 
 class Schedule(models.Model):
-    def __str__(self):
+    def __str__(self): 
         if self.added_by_admin:
             return str(self.admin_member)
         else:

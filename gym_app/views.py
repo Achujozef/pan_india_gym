@@ -30,6 +30,7 @@ def index(request):
                 birthday_count = ExtendedUserModel.objects.filter(Q(dob__day = today_date.day) & Q(dob__month = today_date.month),added_by__user__username = request.user.username).count()
                 membership_expiry_count = AssignTrainer.objects.filter(exp_date = datetime.today().date(),member__added_by__user__username = request.user.username).count()
                 total_equipments = Equipements.objects.filter(added_by__user__username = request.user.username).count()
+                print(total_equipments,"total_equipments")
                 total_trainers = ExtendedUserModel.objects.filter(added_by__user__username = request.user.username,role__name='Trainer').count()
                 total_members = ExtendedUserModel.objects.filter(added_by__user__username = request.user.username,role__name='Customer').count()
                 today_attendance = Attendances.objects.filter(member__added_by__user__username = request.user.username,attendance_date =  datetime.today().date()).order_by('-attendance_date')[:5]
@@ -157,6 +158,7 @@ def bussiness_admin_register(request):
             messages.error(request, 'Passwords do not match')
             return redirect('gym_app:bussiness_admin_register')
     return render(request, 'bussiness_admin_register.html')
+
 
 
 
@@ -314,7 +316,7 @@ def equipmemts_delete(request,delete_id):
 
 @login_required(login_url="/")
 def all_members(request):
-    # members = ExtendedUserModel.objects.filter(role__name='Customer').prefetch_related('user').exclude(user__is_superuser=True).order_by('-id')
+    members = ExtendedUserModel.objects.filter(role__name='Customer').prefetch_related('user').exclude(user__is_superuser=True).order_by('-id')
     gender = Gender.objects.all()
     blood_group = BloodGroup.objects.all()
     prefferedtimee = PrefferedTime.objects.all()
@@ -367,7 +369,7 @@ def all_members(request):
             messages.error(request,'Password not matching')
             return redirect('gym_app:list_members')
         
-    members = None
+    #members = None
     if request.user.is_superuser:
             members = ExtendedUserModel.objects.filter(role__name='Customer').order_by('-id')
     else:
@@ -1301,6 +1303,7 @@ def completed_payment_edit(request,id):
 
 @login_required(login_url="/")
 def slot_booking(request):
+
     added_by = request.user
     available_slot = None
     try:
